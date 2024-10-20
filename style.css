@@ -1,0 +1,65 @@
+body {
+    background: linear-gradient(to right, #3691428c, #2196F3);
+
+    background-size: cover; /* Ensures the background image covers the entire body */
+}
+
+.box {
+    text-align: center; /* Center-aligns text within the box */
+    color: rgba(0, 0, 0, 0.562); /* Text color */
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px); /* Cell size */
+    gap: 8px; /* Space between cells */
+    justify-content: center;
+    max-width: 400px; /* Width of the board */
+    margin: 0 auto; /* Center the board */
+}
+
+.cell {
+    background-color: #000;
+    
+    align-items: center;
+    justify-content: center;
+    font-size: 4em; /* Font size */
+    cursor: pointer;
+    color: white; /* Text color */
+    transition: background-color 0.3s ease; 
+    width: 100%; /* Full width of grid cell */
+    height: 0; /* Adjust height */
+    padding-bottom: 100%; /* Square cell */
+}
+
+.cell:hover {
+    background-color:transparent; /* Hover effect */
+}
+
+.cell.winner {
+    background-color: rgb(29, 66, 29); /* Winning cell highlight */
+}
+
+#restart {
+    background-color: #000;
+    margin: 50px auto;
+    color: white;
+    font-size: 25px;
+    border: none; 
+    border-radius: 5px;
+    padding: 10px 20px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#restart:hover {
+    background-color: rgba(252, 21, 21, 0.788); /* Hover effect for restart button */
+}
+
+h1 {
+    text-align: center; /* Center the title */
+}
+
+h2 {
+    margin: 40px 0; /* Margin for player score headers */
+}
